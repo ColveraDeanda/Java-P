@@ -9,16 +9,22 @@ public class Car {
     static int carCount;
 
     /**
-     * Tambien es posible tener un bloque de inicializacion static:
-     * 1. Solo se va a ejecutar una sola vez al cargar la clase
+     * Tambien es posible tener un bloque de inicializacion static, los puntos a recordar son:
+     * 1. El código del bloque static solo se ejecuta una vez (la 1ra vez que se carga la clase).
      * 2. Se pueden tener varios bloques static, los cuales seran ejecutados en orden.
+     */
+
+    /**
+     * Uso: Se pueden usar para alguna configuracion que solo se ocupe ejecutar una sola vez.
      */
     static {
         carCount = 1;
+        System.out.println("Se ejecuta 1er bloque static");
     }
 
     static {
         resetCarCount();
+        System.out.println("Se ejecuta 2do bloque static");
     }
 
     Car() {
@@ -36,6 +42,9 @@ public class Car {
     public static void main(String[] args) {
         Car myCar = new Car();
         System.out.println(myCar.color); // Blue
+
+        Car myCar2 = new Car(); // Como vemos en este punto, ya no se vuelve a ejecutar el bloque static. Ya que solo se hace al principio cuando carga la clase.
+        System.out.println(myCar2.color); // Blue
     }
 
 

@@ -6,9 +6,9 @@ public class Principal {
 //        Car.carCount = 1; // Acceso a variable estática.
 
         // El siguiente código hará lo mismo:
-//        Car myCar = new Car();
-//        myCar.carCount = 1; // Legal pero confuso.
-//        System.out.println(myCar.carCount); // Legal pero confuso.
+        Car myCar = new Car();
+        myCar.carCount = 1; // Legal pero confuso.
+        System.out.println(myCar.carCount); // Legal pero confuso.
 
         Car car1, car2, car3;
 
@@ -21,7 +21,7 @@ public class Principal {
         System.out.println(car3.serialNumber); // 3
 
         /**
-         * Nota: Las variables de instancia estáticas servirán para compartir información entre todas las instancias que
+         * Nota: Las variables estáticas servirán para compartir información entre todas las instancias que
          * se hagan del objeto.
          */
 

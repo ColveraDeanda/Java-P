@@ -4,26 +4,25 @@ public class Conditions {
 
     public static void main(String[] args) {
 
-        boolean isMeanapolis = false;
-        boolean isSaintPaul = true;
+        boolean isMeanapolis = true;
+        boolean isSaintPaul = false;
 
-        // Hacer asi sin llaves es legal, pero solo tomará la 1er línea
-        if (isMeanapolis)
-            System.out.println("Hello 1");
+        // Hacer asi sin llaves es legal, pero solo se puede usar una linea en el bloque. Si llegas a poner
+        // algo más en el bloque, no compilará.
+        if (isMeanapolis) System.out.println("Hello 1");
         else if (isSaintPaul)
             System.out.println("Hello 2");
-            // System.out.println("Hola xd"); // Usar esta linea no compila.
+            //System.out.println("Hola xd"); // USAR ÉSTA LÍNEA NO COMPILA.
         else
             System.out.println("Hello 3");
-        System.out.println("Hello 4");
+            System.out.println("Hello 4");
 
-        // imprimirá Hello 1 y Hello 4
         /**
          * Si quiero mis bloques bien separados, usar siempre llaves.
          */
 
         /**
-         * VARIABLE SCOPE: Toda aquella variable que sea declarada dentro de la condicion, pertenece a ese scope
+         * VARIABLE SCOPE: TODA AQUELLA VARIABLE QUE SEA DECLARADA DENTRO DE LA CONDICION, PERTENECE A ESE SCOPE.
          */
         // Por Ejemplo:
         int age = 40;
@@ -34,16 +33,17 @@ public class Conditions {
 
         // El siguiente ejemplo seria legal:
         String message = null; // Declaration of "message"
-        int age2 = 40;
+        int age2 = 19;
         if (age2 >= 25) {
             message = "25 years or older.";
         }
-        System.out.println(message); //
+        System.out.println(message);
 
         // Ejemplos de if sin llaves: (Recordar que el if solo toma la 1ra linea. Y las demas lineas no son parte del if)
+        // Recordar tambien que esto no va a marcar error. Solo marcaría error si tengo una 2da linea en if, y una sentencia else-if o else enseguida.
         if (age >= 25)
             message = "25 years or older."; // bloque del if
-        String otherMessage = "More text..."; // No es parte del if y siempre se va a ejecutar.
+            String otherMessage = "More text..."; // No es parte del if y siempre se va a ejecutar.
 
 
         // Otro ejemplo:
@@ -54,16 +54,19 @@ public class Conditions {
         otherMessage = "More text..."; // Se ejecutara siempre esta linea
 
 
-        // Otro ejemplo: Notar que en if y if-else, poner mas lineas es ilegal, excepto para el else que siempre se ejecutaria.
-        if (age >= 25)
-            message = "25 years or older.";
+        int myAge = 40;
+        String myMessage = null;
+        // Otro ejemplo: Notar que en if y if-else, poner mas lineas es ilegal, excepto para el else que siempre se ejecutaria, pero esa ejecución de toma desde fuera del IF.
+        if (myAge >= 25)
+            System.out.println("25 years or older.");
             //otherMessage = "More text..."; // ILLEGAL
-        else if (age >= 20)
-            message = "Between 20 years and 24 years old";
+        else if (myAge >= 20)
+            myMessage = "Between 20 years and 24 years old";
             //otherMessage = "More text..."; // ILLEGAL
         else
-            message = "Younger than 20.";
-        otherMessage = "More text..."; // LEGAL
+            myMessage = "Younger than 20.";
+            System.out.println("More text..."); // ÉSTA 2DA LÍNEA SE EJECUTA PORQUE SE TOMA COMO UNA LINEA FUERA DEL BLOQUE DE IF.
+
 
 
     }
@@ -108,7 +111,8 @@ public class Conditions {
         System.out.println(msg); // Legal
     }
 
-    // Ejemplo 3: Solo puedes usar case y default en tu switch. No puedes declarar una variable. Ya dentro de un case, si se podran hacer variables, etc.
+    // Ejemplo 3: Solo puedes usar case y default en tu switch. No puedes declarar una variable fuera de un case o default.
+    // Ya dentro de un case o default, si se podran hacer variables, etc.
 
     public void doSomething3() {
         int someVariable = 0;

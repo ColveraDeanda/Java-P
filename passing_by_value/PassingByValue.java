@@ -3,7 +3,7 @@ package oracle_certification_preparation.passing_by_value;
 public class PassingByValue {
 
     /**
-     * TODO: TODAS LAS VARIABLES SE PASAN VALOR EN JAVA.
+     * TODO: TODAS LAS VARIABLES SE PASAN POR VALOR EN JAVA.
      * - Un dato primitivo se pasa por valor: Esto quiere decir que se hace una copia del valor primitivo.
      * - Un objeto pasa por valor: Esto quiere decir que se hace una copia de la referencia del objeto.
      */

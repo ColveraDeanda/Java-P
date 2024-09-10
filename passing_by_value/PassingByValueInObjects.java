@@ -3,9 +3,9 @@ package oracle_certification_preparation.passing_by_value;
 public class PassingByValueInObjects {
 
     /**
-     * Ahora en el caso de objetos: Cuando se le pasa un objeto a un metodo, se le está pasando la referencia del objeto.
+     * Ahora en el caso de objetos: Cuando se le pasa un objeto a un metodo, se le está pasando la copia de referencia del objeto.
      *
-     * Esto significa que tanto la variable original como el parámetro del método apuntan al mismo objeto en memoria.
+     * NOTA IMPORTANTE: En java no existe el paso por referencia, TODO SE PASA POR VALOR.
      */
 
     public static void main(String[] args) {

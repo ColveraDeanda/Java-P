@@ -8,7 +8,7 @@ public class InmutableStrings {
          * Los Strings son inmutables. Esto se sabe por que al usar un metodo como trim() o toUpperCase(), se retorna un nuevo string.
          *
          * En el caso de tener un String y a ese String le asignamos un nuevo valor (puede ser un string normal o un string usando +). Lo que
-         * está pasando es que al asignarle un nuevo valor, se está creando un nuevo objeto String. Entonces el objeto String anterior se queda si
+         * está pasando es que al asignarle un nuevo valor, se está creando un nuevo objeto String. Entonces el objeto String anterior se puede quedar sin
          * apuntar a ninguna variable,
          *
          * Tener esa variable sin referencia hace que el garbage collector eventualmente la elimine. Hay que tomar en cuenta que esto puede afectar
@@ -77,7 +77,7 @@ public class InmutableStrings {
 
         /**
          * String greeting = "Welcome to Learn Java with Intertech!";
-         * greeting = greeting.substring(0, 7);
+         * greeting = greeting.substring(0, 7); // empieza a contar desde el index como tal, y termina en el index - 1.
          * System.out.println("greeting");
          *
          * R = greeting

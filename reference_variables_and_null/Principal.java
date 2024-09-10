@@ -9,7 +9,7 @@ public class Principal {
          * El codigo de abajo lanzará un error "NullPointerException".
          */
         String s = null; // variable de referencia s con valor null
-        s = s.toUpperCase(); // Oops! s is null!
+        //s.toUpperCase(); // error aqui. s = null.
 
         /**
          * En el caso de tener acceder a un metodo estático desde una variable de referencia null,
@@ -18,6 +18,7 @@ public class Principal {
 
         Math m = null;
         double result = m.floor(28.15); // Confusing code, but it works.
+        System.out.println(result);
 
         // QUIZ
         /**

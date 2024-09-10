@@ -52,7 +52,7 @@ public class Increment {
         // Do while
         int x1 = 0;
         do {
-            // int x1 = 0; la variable x1 en el while, no va a compilar por que aqui x1 está en el scope del do.
+            //x1 = 0; //la variable x1 en el while, no va a compilar por que aqui x1 está en el scope del do.
             if(x1 % 2 == 0) {
                 System.out.println(x1);
             }

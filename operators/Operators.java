@@ -89,7 +89,7 @@ public class Operators {
          * Con |: Evalua los 2 sentencias, a pesar de que la 1ra sea false.
          * Con ||: Si la sentencia de la izquierda es true, ya no evaluará la 2da sentencia. (Short circuiting).
          */
-        if(isSleeping() && isHome()) {
+        if(isSleeping() & isHome()) {
             System.out.println("Its True ! ");
         }
     }

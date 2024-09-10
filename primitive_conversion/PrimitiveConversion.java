@@ -21,7 +21,7 @@ public class PrimitiveConversion {
         char myChar = 100; // legal, se toma como ACII
         System.out.println(myChar);
 
-       // float f = 3.14; // Esto marcara error, ya que el valor es un double.
+        // float f = 3.14; // Esto marcara error, ya que el valor es un double.
         // Para hacerlo flotante, debemos ponerle la F al final.
         float f2 = 3.14f;
 

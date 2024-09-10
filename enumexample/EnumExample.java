@@ -4,8 +4,12 @@ public class EnumExample {
 
     public static void main(String[] args) {
         Days today = Days.FRIDAY;
+
         String theDay = Days.FRIDAY.name(); // El método name() servirá para traernos el valor en String de esa constante de tipo enum.
+        System.out.println(theDay);
+
         Days userDays = Days.valueOf("TUESDAY"); // valueOf lo que esta haciendo aqui es convertir el string en una constante de tipo enum.
+        System.out.println(userDays.ordinal()); // Ordinal: Devuelve la posicion del elemento en el enum.
 
         String response = "";
 
@@ -21,4 +25,6 @@ public class EnumExample {
         }
         System.out.println(response);
     }
+
 }
+
